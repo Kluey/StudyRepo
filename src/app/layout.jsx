@@ -2,7 +2,7 @@ import './styles/globals.css';
 
 export const metadata = {
   title: 'Lusby Website',
-  description: 'A central location for all ai study needs',
+  description: 'A central location for all AI study needs',
 };
 
 export default function RootLayout({ children }) {
@@ -11,9 +11,13 @@ export default function RootLayout({ children }) {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <meta charSet="UTF-8" />
+        <link rel="icon" href="/assets/favicon.ico" />
       </head>
       <body>
-        <main>{children}</main>
+        <main>
+            {children}
+        </main>
       </body>
     </html>
   );
