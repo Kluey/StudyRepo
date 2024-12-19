@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/navbar';
-import { BackgroundGradientAnimation } from './components/ui/background-gradient-animation';
+import Hero from './components/hero';
 
 const LandingPage = () => {
   return (
@@ -12,8 +12,8 @@ const LandingPage = () => {
           <Navbar />
         </div>
 
-        <div className='landing-page'>
-          {/* Landing Page Content*/}
+        <div className='landing_page'>
+          <Hero />
         </div>
       </main> 
     

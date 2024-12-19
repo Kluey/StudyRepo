@@ -12,7 +12,6 @@ const RootLayout = ({ children }) => {
         <link rel="icon" href="/assets/favicon.ico" />
       </head>
       <body>
-        {/* You can include global components here like a Header or Footer */}
         <main>
           {children} {/* This is where the individual page components will render */}
         </main>

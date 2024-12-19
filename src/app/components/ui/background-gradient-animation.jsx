@@ -16,7 +16,7 @@ export const BackgroundGradientAnimation = ({
   children,
   className,
   interactive = true,
-  containerClassName
+  containerClassName = "bgGradientAnimationContainer"
 }) => {
   const interactiveRef = useRef(null);
 

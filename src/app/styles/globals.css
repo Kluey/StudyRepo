@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .main {
   width: 100vw;
   height: 100vh; 
@@ -17,29 +11,16 @@ html, body {
   align-items: center; 
   padding: 120px 24px 160px 24px;
   pointer-events: none;
-  overflow: hidden; 
 }
 
 .main:before {
-  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0, #fafafa 100%);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0, #ffffff 100%);
   position: absolute;
   content: "";
   z-index: 2;
   width: 100%;
   height: 100%;
   top: 0;
-}
-
-.main:after {
-  content: "";
-  background-image: url("/public/assets/grid.svg");
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  opacity: 0.4;
-  filter: invert(1);
 }
 
 .gradient {
@@ -64,12 +45,7 @@ html, body {
   height: 100%;
   filter: blur(100px) saturate(150%);
   top: 80px;
-  opacity: 0.15;
-}
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+  opacity: 0.20;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -86,16 +62,56 @@ body {
   overflow: hidden;
 }
 
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabs_container {
+  justify-content: center;
+  margin-top: 55px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: 2px solid black;
+  background-color: white;
+  color: black;  /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
 /* Tailwind Styles */
 .navbar {
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6; 
 }
 
-.landing-page {
-  @apply relative z-10 flex justify-center items-center w-full h-screen flex-col max-w-7xl mx-auto sm:px-16 px-6;
+.landing_page {
+  @apply relative z-10 flex justify-start items-center w-full h-screen flex-col max-w-7xl mx-auto sm:px-16 px-6 top-20;
 }
 
 .black_btn {
-  @apply rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black;
+  @apply rounded-full border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black;
 }
 
+
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-600 sm:text-xl text-center max-w-2xl;
+}
+
+.blue_gradient_dark_to_light {
+  @apply font-black bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
+}
+
+.blue_gradient_light_to_dark {
+  @apply font-black bg-gradient-to-r from-blue-400 via-blue-500 to-blue-900 bg-clip-text text-transparent;
+}
+
+.big_tab {
+  @apply w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-serif font-bold text-white bg-gradient-to-br from-blue-400 via-blue-500 to-blue-900;
+}

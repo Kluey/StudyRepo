@@ -1,35 +1,31 @@
 'use client';
-import React from 'react';
-import Link from 'next/link';
+import React, { useState } from 'react';
 
 const Navbar = () => {
+    const [hovered, setHovered] = useState(false);
+
     return (
         <header className='w-full'>
             <nav className='container mx-auto flex justify-between items-center py-4 px-6'>
-                {/* Logo and Navigation Links */}
                 <div className='flex items-center space-x-8'>
                     <img src="/assets/logo.svg" alt="lusby_logo" className="w-20 object-contain" />
-                    <div className='hidden md:flex items-center space-x-6'>
-                        <Link href="/pricing" className='text-gray-800 hover:text-gray-600'>
-                            Pricing
-                        </Link>
-                        <Link href="/tools" className='text-gray-800 hover:text-gray-600'>
-                            Tools
-                        </Link>
-                        <Link href="/contact" className='text-gray-800 hover:text-gray-600'>
-                            Contact
-                        </Link>
-                    </div>
                 </div>
 
-                {/* Login and Sign Up Buttons */}
-                <div className='flex items-center space-x-4'>
-                    <button type="button" className="rounded-full border border-black py-1.5 px-5 text-sm text-black transition-all hover:bg-black hover:text-white"  
-                    onClick={() => window.open('/login')}>
-                        Login
-                    </button>
-                    <button type="button" className="black_btn" onClick={() => window.open('/signup')}>
-                        Sign Up
+                <div className='flex font-serif items-center space-x-4'>
+                    <button type="button" className='rounded-full border border-black py-1.5 px-5 text-sm text-black transition-all hover:bg-black hover:text-white'>Tools</button>
+                    <button
+                        type="button"
+                        className="black_btn flex items-center space-x-2"
+                        onClick={() => window.open('https://github.com/Kluey/lusbywebsite')}
+                        onMouseEnter={() => setHovered(true)}
+                        onMouseLeave={() => setHovered(false)}
+                    >
+                        <img
+                            src={hovered ? "/assets/github-mark.svg" : "/assets/github-mark-white.svg"}
+                            alt="github_logo"
+                            className="w-6 h-6 object-contain"
+                        />
+                        <span>GitHub</span>
                     </button>
                 </div>
             </nav>
