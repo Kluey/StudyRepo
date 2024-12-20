@@ -24,10 +24,9 @@
 }
 
 .gradient {
-  height: fit-content;
   z-index: 3;
   width: 100%;
-  max-width: 640px;
+  height: 100%;
   background-image: radial-gradient(
       at 27% 37%,
       hsla(215, 98%, 61%, 1) 0px,
@@ -41,12 +40,12 @@
     radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 1) 0px, transparent 50%);
   position: absolute;
   content: "";
-  width: 100%;
-  height: 100%;
-  filter: blur(100px) saturate(150%);
-  top: 80px;
-  opacity: 0.20;
+  filter: blur(150px) saturate(150%);
+  top: 0;
+  left: 0;
+  opacity: 0.15;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -74,11 +73,9 @@ body {
 }
 
 .tab {
-  padding: 8px 16px;
+  padding: 8px 50px;
+  margin: 3px;
   border: 2px solid black;
-  background-color: white;
-  color: black;  /* Default text color */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 /* Tailwind Styles */
@@ -87,14 +84,12 @@ body {
 }
 
 .landing_page {
-  @apply relative z-10 flex justify-start items-center w-full h-screen flex-col max-w-7xl mx-auto sm:px-16 px-6 top-20;
+  @apply relative z-10 flex justify-start items-center w-full h-screen flex-col max-w-7xl mx-auto sm:px-16 px-6 top-28;
 }
 
 .black_btn {
   @apply rounded-full border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black;
 }
-
-
 
 .head_text {
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
@@ -113,5 +108,5 @@ body {
 }
 
 .big_tab {
-  @apply w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-serif font-bold text-white bg-gradient-to-br from-blue-400 via-blue-500 to-blue-900;
+  @apply w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-inter text-white bg-gradient-to-br from-blue-400 via-blue-500 to-blue-900;
 }
