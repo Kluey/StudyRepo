@@ -1,7 +1,9 @@
-import React from 'react';
+'use client'
 import './styles/globals.css';
+import { Provider } from 'react-redux';
+import { store } from './services/store.js'
 
-const RootLayout = ({ children }) => {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
@@ -12,12 +14,10 @@ const RootLayout = ({ children }) => {
         <link rel="icon" href="/assets/favicon.ico" />
       </head>
       <body>
-        <main>
-          {children} {/* This is where the individual page components will render */}
-        </main>
+        <Provider store={store}>
+          <main>{children}</main>
+        </Provider>
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}

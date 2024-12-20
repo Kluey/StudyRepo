@@ -1,5 +1,8 @@
+'use client'
 import React from "react";
 import { Tabs } from "./ui/tabs";
+import Summerizer from "./summerizer";
+import DummyContent from "./dummy";
 
 const Hero = () => {
     const tabs = [
@@ -9,7 +12,7 @@ const Hero = () => {
           content: (
             <div className="big_tab">
               <p>AI Summerizer</p>
-              
+                <DummyContent />
             </div>
           ),
         },
