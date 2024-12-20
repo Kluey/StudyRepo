@@ -83,7 +83,7 @@ body {
 }
 
 .landing_page {
-  @apply relative z-10 flex justify-start items-center w-full h-screen flex-col max-w-7xl mx-auto sm:px-16 px-6 top-28;
+  @apply relative z-10 flex justify-start items-center w-full h-screen flex-col max-w-7xl mx-auto sm:px-16 px-6 top-16;
 }
 
 .black_btn {
