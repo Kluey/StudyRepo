@@ -69,7 +69,10 @@ const Hero = () => {
                 Discover how these AI-powered tools can help you study more efficiently.
                 Say goodbye to wasted time and hello to productivity.
             </h2>
-            <Tabs tabs={tabs}/>
+            
+            <div className="tab_container">
+              <Tabs tabs={tabs}/>
+            </div>
         </header>
     );
 };

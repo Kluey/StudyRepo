@@ -58,7 +58,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
 }
 
 .no-visible-scrollbar {
@@ -109,4 +108,8 @@ body {
 
 .big_tab {
   @apply w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-inter text-white bg-gradient-to-br from-blue-400 via-blue-500 to-blue-900;
+}
+
+.tab_container {
+  @apply h-[20rem] md:h-[40rem] [perspective:1000px] relative flex flex-col mx-auto w-full items-start justify-start mb-40;
 }
