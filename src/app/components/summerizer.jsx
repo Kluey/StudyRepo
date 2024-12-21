@@ -67,7 +67,7 @@ const Summerizer = () => {
           onSubmit={handleSubmit}
         >
           <img
-            src="/assets/link.svg" // Update to use assets from the public folder
+            src="/link.svg" // Update to use assets from the public folder
             alt="link-icon"
             className="absolute left-0 my-2 ml-3 w-5"
           />
@@ -99,7 +99,7 @@ const Summerizer = () => {
             >
               <div className="copy_btn" onClick={() => handleCopy(item.url)}>
                 <img
-                  src={copied === item.url ? '/assets/tick.svg' : '/assets/copy.svg'} // Update image references
+                  src={copied === item.url ? '/tick.svg' : '/copy.svg'} // Update image references
                   alt={copied === item.url ? 'tick_icon' : 'copy_icon'}
                   className="w-[40%] h-[40%] object-contain"
                 />
@@ -116,7 +116,7 @@ const Summerizer = () => {
       <div className="my-10 max-w-full flex justify-center items-center">
         {isFetching ? (
           <img
-            src="/assets/loader.svg" // Update loader reference
+            src="/loader.svg" // Update loader reference
             alt="loader"
             className="w-20 h-20 object-contain"
           />

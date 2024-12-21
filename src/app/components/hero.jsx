@@ -3,16 +3,21 @@ import React from "react";
 import { Tabs } from "./ui/tabs";
 import Summerizer from "./summerizer";
 import DummyContent from "./dummy";
+import HeroSummerizer from "./heroSummerizer";
+import { BackgroundLines } from "./ui/background-lines";
 
 const Hero = () => {
     const tabs = [
         {
           title: "AI Summerizer",
           value: "summerizer",
-          content: (
-            <div className="big_tab">
-              <p>AI Summerizer</p>
-                <DummyContent />
+          content: (    
+            <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-inter text-white bg-gradient-to-br from-blue-400 via-blue-600 to-blue-900">
+              <p className="font-extralight bg-gradient-to-r from-orange-300 via-orange-500 to-red-600 bg-clip-text text-transparent">AI Summerizer</p>
+              <div className="relative z-10 flex justify-start items-center w-full h-screen flex-col max-w-7xl mx-auto sm:px-16 px-6 top-16">
+                <HeroSummerizer />
+                <Summerizer />
+              </div>
             </div>
           ),
         },
@@ -20,9 +25,9 @@ const Hero = () => {
           title: "AI Question Generator",
           value: "questionGenerator",
           content: (
-            <div className="big_tab">
-              <p>AI Question Generator</p>
-              
+            <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-inter text-white bg-gradient-to-br from-orange-300 via-orange-500 to-red-600">
+              <p className="font-extralight bg-gradient-to-r from-orange-300 via-orange-500 to-red-600 bg-clip-text text-transparent">AI Question Generator</p>
+              <DummyContent />
             </div>
           ),
         },
@@ -30,9 +35,9 @@ const Hero = () => {
           title: "AI Essay Writer",
           value: "essayWriter",
           content: (
-            <div className="big_tab">
-              <p>AI Essay Writer</p>
-              
+            <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-inter text-white bg-gradient-to-br from-purple-500 to-violet-900">
+              <p className="font-extralight bg-gradient-to-r from-orange-300 via-orange-500 to-red-600 bg-clip-text text-transparent">AI Essay Writer</p>
+              <DummyContent />
             </div>
           ),
         },
@@ -40,9 +45,9 @@ const Hero = () => {
           title: "AI Flash Cards",
           value: "flashCards",
           content: (
-            <div className="big_tab">
-              <p>AI Flash Cards</p>
-              
+            <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-inter text-white bg-gradient-to-br from-green-300 via-green-600 to-green-900">
+              <p className="font-extralight bg-gradient-to-r from-orange-300 via-orange-500 to-red-600 bg-clip-text text-transparent">AI Flash Cards</p>
+              <DummyContent />
             </div>
           ),
         },
@@ -50,9 +55,9 @@ const Hero = () => {
           title: "Random",
           value: "random",
           content: (
-            <div className="big_tab">
-              <p>Random tab</p>
-              
+            <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-inter text-white bg-gradient-to-br from-cyan-400 via-cyan-600 to-cyan-900">
+              <p className="font-extralight bg-gradient-to-r from-orange-300 via-orange-500 to-red-600 bg-clip-text text-transparent">Random tab</p>
+              <DummyContent />
             </div>
           ),
         },

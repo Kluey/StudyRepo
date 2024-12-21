@@ -60,8 +60,11 @@ export const Tabs = ({
                   "absolute inset-0 bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 dark:bg-zinc-800",
                   {
                     "rounded-l-xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-200": idx === 0,
-                    "rounded-r-xl bg-gradient-to-l from-blue-500 via-blue-400 to-blue-200": idx === propTabs.length - 1, 
-                    "rounded-none": idx !== 0 && idx !== propTabs.length - 1, 
+                    "bg-gradient from-orange-300 via-orange-500 to-red-600": idx === 1,
+                    "bg-gradient from-purple-500 via-purple-500 to-violet-600": idx === 2,
+                    "bg-gradient from-green-300 via-green-400 to-green-700": idx === 3,
+                    "rounded-r-xl bg-gradient-to-r from-cyan-200 via-cyan-400 to-cyan-600": idx === 4,
+                    "rounded-none": idx > 0 && idx < propTabs.length - 1,
                   },
                   activeTabClassName
                 )}
