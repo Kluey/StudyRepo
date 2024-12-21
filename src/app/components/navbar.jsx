@@ -8,7 +8,7 @@ const Navbar = () => {
         <header className='w-full'>
             <nav className='container mx-auto flex justify-between items-center py-4 px-6'>
                 <div className='flex items-center space-x-8'>
-                    <img src="/logo.svg" alt="lusby_logo" className="w-20 object-contain" />
+                    <img src="/logo.svg" alt="lusby_logo" className="w-44 object-contain" />
                 </div>
 
                 <div className='flex font-serif items-center space-x-4'>

@@ -57,10 +57,10 @@ export const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-gray-200 dark:bg-zinc-800",
+                  "absolute inset-0 bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 dark:bg-zinc-800",
                   {
-                    "rounded-l-full": idx === 0,
-                    "rounded-r-full": idx === propTabs.length - 1, 
+                    "rounded-l-xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-200": idx === 0,
+                    "rounded-r-xl bg-gradient-to-l from-blue-500 via-blue-400 to-blue-200": idx === propTabs.length - 1, 
                     "rounded-none": idx !== 0 && idx !== propTabs.length - 1, 
                   },
                   activeTabClassName

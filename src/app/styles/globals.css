@@ -65,6 +65,10 @@ body {
   -ms-overflow-style: none;
   -webkit-overflow-scrolling: touch;
 }
+ 
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
 .tabs_container {
   justify-content: center;
@@ -83,7 +87,7 @@ body {
 }
 
 .landing_page {
-  @apply relative z-10 flex justify-start items-center w-full h-screen flex-col max-w-7xl mx-auto sm:px-16 px-6 top-16;
+  @apply relative z-10 flex justify-start items-center w-full h-screen flex-col max-w-7xl mx-auto sm:px-16 px-6 top-24;
 }
 
 .black_btn {
@@ -91,7 +95,7 @@ body {
 }
 
 .head_text {
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
+  @apply mt-5 text-8xl font-extrabold leading-[1.15] text-black sm:text-6xl text-center;
 }
 
 .desc {
