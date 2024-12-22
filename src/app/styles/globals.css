@@ -13,14 +13,60 @@
   pointer-events: none;
 }
 
-.main:before {
-  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0, #ffffff 100%);
+.tab_main {
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+  overflow: hidden;
+  position: relative;
+}
+
+.tab_main:before {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0, #fafafa 100%);
   position: absolute;
   content: "";
   z-index: 2;
   width: 100%;
   height: 100%;
   top: 0;
+}
+
+.tab_main:after {
+  content: "";
+  background-image: url("/src/assets/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
+}
+
+.main:before {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0, #fafafa 100%);
+  position: absolute;
+  content: "";
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.main:after {
+  content: "";
+  background-image: url("/public/grid.svg");
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0.4;
+  filter: invert(1);
 }
 
 .gradient {
@@ -47,10 +93,9 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
   }
 }
 
@@ -79,6 +124,21 @@ body {
   padding: 8px 50px;
   margin: 3px;
   border: 1.5px solid black;
+}
+
+.tab_underline {
+  position: relative;
+  padding-bottom: 10px; /* Adjust padding as needed */
+}
+
+.tab_underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Adjust this value for the thickness of the underline */
+  background-color: currentColor; /* This makes the underline the same color as the text */
 }
 
 /* Tailwind Styles */
