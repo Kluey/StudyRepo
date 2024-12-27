@@ -16,7 +16,7 @@ const Navbar = () => {
                     <button
                         type="button"
                         className="black_btn flex items-center space-x-2"
-                        onClick={() => window.open('https://github.com/Kluey/lusbywebsite')}
+                        onClick={() => window.open('https://github.com/Kluey')}
                         onMouseEnter={() => setHovered(true)}
                         onMouseLeave={() => setHovered(false)}
                     >

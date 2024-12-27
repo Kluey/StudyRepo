@@ -5,9 +5,9 @@ import { cn } from '../../lib/utils';
 
 export const Tabs = ({
   tabs: propTabs,
-  containerClassName = "tabs_container",
+  containerClassName = "tabs_container", // The Buttons container
   activeTabClassName = "active_tab",
-  tabClassName = "tab",
+  tabClassName = "tab", // The buttons
   contentClassName = "tab_content"
 }) => {
   const [active, setActive] = useState(propTabs[0]);
@@ -43,8 +43,8 @@ export const Tabs = ({
               "px-4 py-2 font-medium font-inter border border-black bg-white text-black text-sm hover:shadow-[4px_4px_0px_0px_rgba(0,0,0)] transition duration-200",
               tabClassName,
               {
-                "rounded-l-2xl": idx === 0,
-                "rounded-r-2xl": idx === propTabs.length - 1,
+                "rounded-l-xl": idx === 0,
+                "rounded-r-xl": idx === propTabs.length - 1,
                 "rounded-none": idx !== 0 && idx !== propTabs.length - 1, 
               }
             )}
@@ -59,11 +59,11 @@ export const Tabs = ({
                 className={cn(
                   "absolute inset-0 bg-gradient-to-r from-blue-200 via-blue-300 to-blue-400 dark:bg-zinc-800",
                   {
-                    "rounded-l-xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-200": idx === 0,
+                    "rounded-l-lg bg-gradient-to-r from-blue-500 via-blue-400 to-blue-200": idx === 0,
                     "bg-gradient from-orange-300 via-orange-500 to-red-600": idx === 1,
                     "bg-gradient from-purple-500 via-purple-500 to-violet-600": idx === 2,
                     "bg-gradient from-green-300 via-green-400 to-green-700": idx === 3,
-                    "rounded-r-xl bg-gradient-to-r from-cyan-200 via-cyan-400 to-cyan-600": idx === 4,
+                    "rounded-r-lg bg-gradient-to-r from-cyan-200 via-cyan-400 to-cyan-600": idx === 4,
                     "rounded-none": idx > 0 && idx < propTabs.length - 1,
                   },
                   activeTabClassName
