@@ -5,5 +5,3 @@ A simple project to learn the basics of web design and Next.js and implementing 
 
 Project:
 A webpage with various easily accessible AI study tools
-
-[http://localhost:3000](http://localhost:3000) 
